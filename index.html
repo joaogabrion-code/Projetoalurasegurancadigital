@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Segurança digital para jovens</title>
+    <meta name="description" content="Dicas curtas de segurança digital para jovens e adolescentes.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="pagina">
+        <a class="pular" href="#leitura">Ir para o conteúdo</a>
+
+        <header class="topo">
+            <div class="titulo">
+                <svg class="escudo" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                    <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5l-8-3z" />
+                </svg>
+                <div>
+                    <p class="selo">Para jovens e adolescentes</p>
+                    <h1>Segurança digital</h1>
+                </div>
+            </div>
+            <div class="barra" role="toolbar" aria-label="Acessibilidade">
+                <button type="button" id="diminuir">A− Diminuir</button>
+                <button type="button" id="aumentar">A+ Aumentar</button>
+                <button type="button" id="ouvir" aria-pressed="false">Ouvir</button>
+                <button type="button" id="contraste" aria-pressed="false">Alto contraste</button>
+            </div>
+        </header>
+
+        <p id="status" class="status" aria-live="polite">Letra 18px.</p>
+
+        <main id="conteudo">
+            <div id="leitura" tabindex="-1">
+                <section class="intro">
+                    <h2>Sua vida online também pede cuidado</h2>
+                    <p>Senha, link, foto e mensagem podem te proteger ou te colocar em risco. As dicas abaixo são curtas
+                        de propósito.</p>
+                    <p class="nota">A− diminui a letra. A+ aumenta. Ouvir lê o texto em voz alta. Alto contraste deixa o
+                        fundo preto e as letras amarelas.</p>
+                </section>
+
+                <nav aria-label="Temas">
+                    <ul class="atalhos">
+                        <li><a href="#senhas">Senhas</a></li>
+                        <li><a href="#golpes">Golpes</a></li>
+                        <li><a href="#publicar">Publicar</a></li>
+                        <li><a href="#respeito">Respeito</a></li>
+                        <li><a href="#ajuda">Ajuda</a></li>
+                        <li><a href="#quiz">Teste</a></li>
+                    </ul>
+                </nav>
+
+                <div class="temas">
+                    <details class="tema" id="senhas" open>
+                        <summary>
+                            <h2>Senhas fortes</h2>
+                        </summary>
+                        <ul>
+                            <li>Crie uma frase longa que só você lembre. Exemplo: MeuTimeGanhou!noDomingo</li>
+                            <li>Não use a mesma senha no e-mail e nas redes sociais.</li>
+                            <li>Não conte sua senha para colegas, nem em conversa privada.</li>
+                            <li>Ative a verificação em duas etapas no e-mail.</li>
+                        </ul>
+                    </details>
+
+                    <details class="tema" id="golpes">
+                        <summary>
+                            <h2>Golpes e links falsos</h2>
+                        </summary>
+                        <ul>
+                            <li>Desconfie de prêmio, pressa e ameaça de “conta bloqueada”.</li>
+                            <li>Banco, escola e loja séria não pedem senha por mensagem.</li>
+                            <li>Confira o endereço do site antes de digitar qualquer dado.</li>
+                            <li>Se ficar na dúvida, feche a página e fale com um adulto.</li>
+                        </ul>
+                    </details>
+
+                    <details class="tema" id="publicar">
+                        <summary>
+                            <h2>O que publicar</h2>
+                        </summary>
+                        <ul>
+                            <li>Deixe seu perfil privado e revise quem pode ver suas fotos.</li>
+                            <li>Não publique endereço, nome da escola, telefone nem sua rotina.</li>
+                            <li>Print existe: o que você manda pode ser encaminhado.</li>
+                            <li>Antes de postar, imagine essa imagem na mão de um professor.</li>
+                        </ul>
+                    </details>
+
+                    <details class="tema" id="respeito">
+                        <summary>
+                            <h2>Respeito online</h2>
+                        </summary>
+                        <ul>
+                            <li>Não encaminhe montagem, zoação ou corrente contra alguém.</li>
+                            <li>Se isso acontecer com você, bloqueie, guarde um print e conte a um adulto.</li>
+                            <li>Você não precisa responder na hora para se defender.</li>
+                            <li>Use a denúncia da própria rede social.</li>
+                        </ul>
+                    </details>
+
+                    <details class="tema" id="ajuda">
+                        <summary>
+                            <h2>Peça ajuda</h2>
+                        </summary>
+                        <ul>
+                            <li>Procure um responsável, um professor ou outro adulto de confiança.</li>
+                            <li>No Brasil, o <a href="tel:100">Disque 100</a> recebe denúncias de violações de direitos.
+                            </li>
+                            <li>A <a href="https://new.safernet.org.br/" target="_blank"
+                                    rel="noopener noreferrer">SaferNet Brasil</a> orienta sobre crimes e problemas na
+                                internet.</li>
+                            <li>Pedir ajuda cedo evita que o problema cresça.</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+
+            <section class="quiz" id="quiz" aria-labelledby="titulo-quiz">
+                <h2 id="titulo-quiz">Teste rápido</h2>
+                <p class="nota">Três situações. Escolha a atitude mais segura.</p>
+                <p id="quiz-passo">Pergunta 1 de 3</p>
+
+                <div class="pergunta" data-certa="1">
+                    <p class="enunciado">Mensagem: “Você ganhou um celular. Entre com sua senha para receber.” O que
+                        você faz?</p>
+                    <button type="button" class="opcao">Clico logo, antes que o prêmio acabe.</button>
+                    <button type="button" class="opcao">Não clico e mostro a mensagem para um adulto.</button>
+                    <button type="button" class="opcao">Envio a senha se o site tiver o logo de uma loja.</button>
+                </div>
+
+                <div class="pergunta" data-certa="2" hidden>
+                    <p class="enunciado">Qual senha protege mais?</p>
+                    <button type="button" class="opcao">12345678</button>
+                    <button type="button" class="opcao">O nome do meu pet com a minha idade.</button>
+                    <button type="button" class="opcao">Uma frase longa que só eu conheço.</button>
+                </div>
+
+                <div class="pergunta" data-certa="1" hidden>
+                    <p class="enunciado">Um colega pede para espalhar um print humilhando outra pessoa. Você:</p>
+                    <button type="button" class="opcao">Encaminha para o grupo, porque todo mundo viu.</button>
+                    <button type="button" class="opcao">Não encaminha, apaga e avisa um adulto.</button>
+                    <button type="button" class="opcao">Manda só para um amigo de confiança.</button>
+                </div>
+
+                <p id="feedback" aria-live="polite"></p>
+                <button type="button" class="acao" id="seguir" hidden>Próxima pergunta</button>
+                <p id="resultado" hidden></p>
+                <button type="button" class="acao fantasma" id="reiniciar" hidden>Tentar de novo</button>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <p>Site educativo para jovens. Não substitui uma conversa com um adulto de confiança.</p>
+            <p>Ajuda: <a href="tel:100">Disque 100</a> · <a href="https://new.safernet.org.br/" target="_blank"
+                    rel="noopener noreferrer">SaferNet Brasil</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

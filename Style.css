@@ -1,0 +1,369 @@
+/* Mude as cores aqui. O alto contraste troca estas variáveis. */
+:root {
+    --fundo: #e6f0ec;
+    --cartao: #ffffff;
+    --texto: #14221c;
+    --suave: #2c4038;
+    --marca: #0b5a4c;
+    --marca-escura: #06382f;
+    --aviso: #8a3d00;
+    --linha: #c5d6cf;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Atkinson Hyperlegible", "Segoe UI", "Trebuchet MS", sans-serif;
+    line-height: 1.5;
+}
+
+body:has(#pagina.contraste) {
+    background: #000000;
+}
+
+#pagina {
+    box-sizing: border-box;
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 1rem 1rem 2.75rem;
+    font-size: 18px;
+    color: var(--texto);
+    overflow-wrap: break-word;
+}
+
+#pagina * {
+    box-sizing: border-box;
+}
+
+#pagina [hidden] {
+    display: none !important;
+}
+
+#pagina .pular {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    transform: translateY(-200%);
+    background: #ffffff;
+    color: #000000;
+    padding: 0.4rem 0.7rem;
+    z-index: 6;
+}
+
+#pagina .pular:focus {
+    transform: none;
+}
+
+#pagina .topo {
+    position: sticky;
+    top: 0.5rem;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1rem;
+    padding: 0.85rem 1rem;
+    background: var(--cartao);
+    color: var(--texto);
+    border: 2px solid var(--linha);
+    border-top: 6px solid var(--marca);
+    border-radius: 14px;
+}
+
+#pagina .titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+#pagina .escudo {
+    display: block;
+    color: var(--marca);
+}
+
+#pagina .selo {
+    margin: 0;
+    color: var(--marca);
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+#pagina h1 {
+    margin: 0;
+    font-size: 1.55em;
+    line-height: 1.15;
+}
+
+#pagina .barra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+#pagina .barra button,
+#pagina .acao {
+    min-height: 44px;
+    padding: 0.45em 0.8em;
+    border: 2px solid var(--marca-escura);
+    border-radius: 999px;
+    background: var(--marca-escura);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#pagina .barra button {
+    flex: 1 1 8.5rem;
+}
+
+#pagina .barra button:disabled {
+    background: transparent;
+    color: var(--suave);
+    border-style: dashed;
+}
+
+#pagina .status {
+    min-height: 1.5em;
+    margin: 0.75rem 0 0;
+    color: var(--suave);
+    font-weight: 700;
+}
+
+#pagina .intro {
+    margin-top: 1.1rem;
+}
+
+#pagina h2 {
+    margin: 0;
+    font-size: 1.28em;
+    line-height: 1.25;
+}
+
+#pagina .intro p,
+#pagina .nota,
+#pagina .rodape p {
+    margin: 0.55rem 0 0;
+}
+
+#pagina .nota {
+    color: var(--suave);
+}
+
+#pagina .atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+#pagina a {
+    color: var(--marca-escura);
+    font-weight: 700;
+    text-underline-offset: 0.18em;
+}
+
+#pagina .tema,
+#pagina .quiz {
+    scroll-margin-top: 7.5rem;
+    background: var(--cartao);
+    border: 2px solid var(--linha);
+    border-radius: 14px;
+    margin: 0.7rem 0;
+    padding: 0.35rem 1rem 0.2rem;
+}
+
+#pagina .quiz {
+    margin-top: 1.3rem;
+    padding-bottom: 1rem;
+    border-color: var(--marca);
+}
+
+#pagina summary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 48px;
+    padding: 0.35rem 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+#pagina summary::-webkit-details-marker {
+    display: none;
+}
+
+#pagina summary h2 {
+    flex: 1;
+}
+
+#pagina .temas {
+    counter-reset: tema;
+}
+
+#pagina summary h2::before {
+    content: counter(tema, decimal-leading-zero) "  ";
+    counter-increment: tema;
+    color: var(--marca);
+}
+
+#pagina summary::after {
+    content: "+";
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#pagina details[open] summary::after {
+    content: "–";
+}
+
+#pagina .tema ul {
+    margin: 0.2rem 0 0.85rem;
+    padding-left: 1.15rem;
+}
+
+#pagina .tema li {
+    margin: 0.35rem 0;
+}
+
+#pagina .tema li::marker {
+    color: var(--marca);
+}
+
+#pagina .enunciado {
+    margin: 0.7rem 0 0.3rem;
+    font-weight: 700;
+}
+
+#pagina .opcao {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    margin: 0.45rem 0;
+    padding: 0.7rem 0.8rem;
+    border: 2px solid var(--linha);
+    border-radius: 12px;
+    background: var(--cartao);
+    color: var(--texto);
+    font: inherit;
+    text-align: left;
+}
+
+#pagina .opcao:disabled {
+    cursor: default;
+}
+
+#pagina .opcao.certa {
+    border-color: var(--marca);
+    box-shadow: inset 5px 0 0 var(--marca);
+}
+
+#pagina .opcao.errada {
+    border-color: var(--aviso);
+    box-shadow: inset 5px 0 0 var(--aviso);
+}
+
+#pagina .opcao.certa::after {
+    content: " — escolha segura";
+    font-weight: 700;
+}
+
+#pagina .opcao.errada::after {
+    content: " — não é a melhor";
+    font-weight: 700;
+}
+
+#pagina .acao {
+    margin-top: 0.8rem;
+}
+
+#pagina .fantasma {
+    background: transparent;
+    color: var(--marca-escura);
+}
+
+#pagina #feedback,
+#pagina #resultado {
+    margin: 0.7rem 0 0;
+    font-weight: 700;
+}
+
+#pagina .rodape {
+    margin-top: 1.4rem;
+    padding-top: 0.8rem;
+    border-top: 2px solid var(--linha);
+    color: var(--suave);
+}
+
+#pagina :focus-visible {
+    outline: 3px solid var(--marca);
+    outline-offset: 2px;
+}
+
+#pagina.contraste {
+    --fundo: #000000;
+    --cartao: #000000;
+    --texto: #ffff00;
+    --suave: #ffff00;
+    --marca: #ffff00;
+    --marca-escura: #ffff00;
+    --aviso: #ffffff;
+    --linha: #ffff00;
+    color: #ffff00;
+}
+
+#pagina.contraste .barra button,
+#pagina.contraste .acao {
+    background: #ffff00;
+    color: #000000;
+    border-color: #ffff00;
+}
+
+#pagina.contraste .barra button:disabled {
+    background: #000000;
+    color: #ffff00;
+    border-style: dashed;
+}
+
+#pagina.contraste .barra button[aria-pressed="true"],
+#pagina.contraste .fantasma {
+    background: #000000;
+    color: #ffff00;
+}
+
+#pagina.contraste a,
+#pagina.contraste .pular:focus {
+    color: #ffff00;
+}
+
+#pagina.contraste :focus-visible {
+    outline-color: #ffffff;
+}
+
+@media (max-width: 420px) {
+    #pagina {
+        padding-inline: 0.75rem;
+    }
+
+    #pagina .topo {
+        top: 0;
+        border-radius: 0 0 14px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
